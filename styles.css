@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #fff;
+    overscroll-behavior: none;
 }
 
 .texto-dorado {
@@ -22,8 +28,14 @@ body {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-
+    will-change: background-position;
     animation: brillo 8s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .texto-dorado {
+        animation: brillo 12s linear infinite;
+    }
 }
 
 @keyframes brillo {
@@ -44,6 +56,17 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: cover;
+    will-change: background-position;
+}
+
+@media (max-width: 768px) {
+    .parallax,
+    .parallax-section {
+        height: 50vh;
+        background-attachment: scroll;
+        will-change: auto;
+    }
 }
 
 .parallax {
@@ -67,6 +90,13 @@ body {
     padding: 60px 20px;
 }
 
+@media (max-width: 768px) {
+    .contenido {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+}
+
 .contenido h1 {
     margin-bottom: 20px;
 }
@@ -87,10 +117,29 @@ body {
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    .fechas {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .fechas > div {
+        padding-top: 20px;
+        margin-bottom: 5px;
+    }
+}
+
 .texto-centrado {
     color: #6B3E2E;
     max-width: 600px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .texto-centrado {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 .countdown-container {
@@ -104,6 +153,13 @@ body {
     border-radius: 12px;
 }
 
+@media (max-width: 768px) {
+    .countdown-container {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+}
+
 .titulo-principal {
     font-size: 3rem;
     margin-bottom: 30px;
@@ -114,6 +170,12 @@ body {
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        gap: 15px;
+    }
 }
 
 .countdown > div {
@@ -138,6 +200,17 @@ body {
     color: #4A2A1F;
 }
 
+@media (max-width: 768px) {
+    .countdown span {
+        font-size: 1.5rem;
+    }
+
+    .countdown p {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+}
+
 .itinerario-list {
     list-style: none;
     padding: 0;
@@ -157,6 +230,12 @@ body {
     border-color: #6B3E2E;
 }
 
+@media (max-width: 768px) {
+    .itinerario-list li {
+        padding: 8px 0;
+    }
+}
+
 
 /* FADE ANIMATION */
 .fade-section {
@@ -164,6 +243,14 @@ body {
     transform: translateY(60px);
     animation: fadeIn 1.2s ease-out forwards;
     animation-delay: 0.3s;
+    will-change: opacity, transform;
+}
+
+@media (max-width: 768px) {
+    .fade-section {
+        animation: fadeIn 0.8s ease-out forwards;
+        animation-delay: 0.1s;
+    }
 }
 
 .map-container {
@@ -177,10 +264,31 @@ iframe {
     border: 0;
 }
 
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 100%;
+    }
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 
@@ -194,11 +302,19 @@ iframe {
     text-decoration: none;
     font-family: "Cinzel", serif;
     transition: 0.3s ease;
+    font-size: 16px;
 }
 
 .btn-whatsapp:hover {
     background: #C6A756;
     color: #4A2A1F;
+}
+
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 }
 
 .imperial-script-regular {
@@ -207,6 +323,7 @@ iframe {
     font-style: normal;
     font-size: 110px;
     color: #6B3E2E;
+    font-display: swap;
 }
 
 .imperial-script {
@@ -215,10 +332,9 @@ iframe {
     font-style: normal;
     font-size: 150px;
     line-height: 50%;
-        color: #6B3E2E;
-
+    color: #6B3E2E;
+    font-display: swap;
 }
-
 
 .cinzel {
     font-family: "Cinzel", serif;
@@ -226,4 +342,20 @@ iframe {
     font-weight: 200;
     font-style: normal;
     font-size: 30px;
+    font-display: swap;
+}
+
+@media (max-width: 768px) {
+    .imperial-script-regular {
+        font-size: 48px;
+    }
+
+    .imperial-script {
+        font-size: 56px;
+        margin-bottom: 10px;
+    }
+
+    .cinzel {
+        font-size: 18px;
+    }
 }
