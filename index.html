@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de boda</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Imperial+Script&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+
+    <section class="parallax fade-section"></section>
+
+    <section class="contenido">
+        <h1 class="imperial-script-regular texto-dorado">¡Nos casamos!</h1>
+        <p class="cinzel">Gracias por acompañarnos en este momento tan especial. Estamos emocionados de compartir
+            nuestra alegría con
+            ustedes y esperamos que puedan unirse a nosotros en la celebración de nuestro amor.
+        </p>
+    </section>
+
+
+    <section class="contenido">
+        <h1 class="imperial-script texto-dorado">Acompañanos en nuestra ceremonia</h1>
+        <p class="cinzel texto-centrado">
+            El dia 21 de marzo del 2026
+        </p>
+        <p class="cinzel texto-centrado">
+            a partir de las 3:00 pm
+        </p>
+        <p class="cinzel texto-centrado">
+            en "Salon Lily's".
+        </p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=Calle+Doctor+Gerónimo+de+Orozco+206,+Primavera,+20050+Aguascalientes,+Ags.,+Mexico&output=embed"
+                title="Ubicación del salón en Google Maps" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+
+    <section class="parallax-section parallax-content-section">
+        <div class="fechas">
+            <div class="countdown-container" id="countdown-container">
+                <h2 class="imperial-script">Itinerario</h2>
+                <ul class="cinzel itinerario-list">
+                    <li>3:00 pm - Recepción</li>
+                    <li>3:30 - 4:30 pm - Banquete</li>
+                    <li>5:00 pm - Ceremonia</li>
+                    <li>8:00 pm - Baile</li>
+                </ul>
+            </div>
+
+            <div class="countdown-container">
+                <h1 class="imperial-script-regular countdown">Dias restantes</h1>
+                <div id="countdown" class="countdown">
+                    <div>
+                        <span id="days">00</span>
+                        <p>Días</p>
+                    </div>
+                    <div>
+                        <span id="hours">00</span>
+                        <p>Horas</p>
+                    </div>
+                    <div>
+                        <span id="minutes">00</span>
+                        <p>Minutos</p>
+                    </div>
+                    <div>
+                        <span id="seconds">00</span>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="cinzel texto-centrado">Agradecemos muchisimo que nos puedas confirmar tu asistencia</h1>
+
+                <button class="btn-whatsapp" id="confirmarAsistenciaBtn" type="button">Confirmar asistencia</button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="parallax-section" id="fotoJun">
+
+    </section>
+
+
+    </main>
+
+
+    <script>
+        const weddingDate = new Date("2026-03-21T15:00:00").getTime();
+        const daysElement = document.getElementById("days");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+        const countdownElement = document.getElementById("countdown");
+        const confirmarAsistenciaBtn = document.getElementById("confirmarAsistenciaBtn");
+
+        const formatTimeUnit = (value) => String(Math.max(0, value)).padStart(2, "0");
+
+        function updateCountdown() {
+            const now = Date.now();
+            const distance = weddingDate - now;
+
+            if (distance <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "¡Ya comenzó la celebración! 💍";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.textContent = formatTimeUnit(days);
+            hoursElement.textContent = formatTimeUnit(hours);
+            minutesElement.textContent = formatTimeUnit(minutes);
+            secondsElement.textContent = formatTimeUnit(seconds);
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        if (confirmarAsistenciaBtn) {
+            confirmarAsistenciaBtn.addEventListener("click", () => {
+                const mensaje = "Hola Majo y Ángel, confirmo mi asistencia 💛";
+                const numero = "524491234567";
+                const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+                window.open(url, "_blank");
+            });
+        }
+    </script>
+</body>
+
+</html>
