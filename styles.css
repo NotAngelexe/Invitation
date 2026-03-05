@@ -81,9 +81,9 @@ body {
 @media (max-width: 768px) {
     .parallax,
     .parallax-section {
-        background-attachment: fixed;
-        will-change: background-position;
-        background-size: contain;
+        background-attachment: scroll;
+        will-change: auto;
+        background-size: cover;
     }
 
     .parallax-section {
