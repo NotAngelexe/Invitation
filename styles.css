@@ -55,21 +55,24 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     will-change: background-position;
 }
 
 .parallax {
     background-image: url(styles/images/MajoAngel.png);
+    background-color: #E9DDC8;
 }
 
 .parallax-section {
     background-image: url(styles/images/IMG_2366.png);
+    background-color: #E9DDC8;
 }
 
 /* Last parallax section - full screen photo only */
 .parallax-section:last-of-type {
     background-image: url(styles/images/IMG_2366.png);
+    background-size: cover;
     height: 100vh;
     display: block;
     overflow: hidden;
@@ -78,8 +81,9 @@ body {
 @media (max-width: 768px) {
     .parallax,
     .parallax-section {
-        background-attachment: scroll;
-        will-change: auto;
+        background-attachment: fixed;
+        will-change: background-position;
+        background-size: contain;
     }
 
     .parallax-section {
@@ -88,6 +92,7 @@ body {
 
     .parallax-section:last-of-type {
         height: 100vh;
+        background-size: cover;
     }
 }
 

@@ -31,27 +31,23 @@
                 ustedes y esperamos que puedan unirse a nosotros en la celebración de nuestro amor.
             </p>
             <div class="decorative-line-bottom"></div>
-        </section>
-
-
-        <section class="contenido">
             <h1 class="imperial-script texto-dorado"> Acompañanos en nuestra ceremonia</h1>
-
             <ul class="ceremonia-info">
                 <li class="cinzel texto-centrado">📆 El dia 21 de marzo del 2026</li>
                 <li class="cinzel texto-centrado">⏰ A partir de las 3:00 pm</li>
                 <li class="cinzel texto-centrado">📍 Salon Lily's</li>
             </ul>
+            <div class="decorative-line-bottom"></div>
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps?q=Calle+Doctor+Gerónimo+de+Orozco+206,+Primavera,+20050+Aguascalientes,+Ags.,+Mexico&output=embed"
                     title="Ubicación del salón en Google Maps" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
+            <div class="decorative-line-bottom"></div>
         </section>
 
-
-        <section class="parallax-section">
+        <section class="contenido">
             <br><br>
             <div class="parallax-content-section">
                 <div class="fechas">
@@ -86,19 +82,24 @@
                         </div>
                     </div>
                     <div class="countdown-container">
-                        <h2 class="imperial-script texto-centrado rsvp-title" style="color: #f3f2ed;">💌 Confirma tu asistencia</h2>
-                        <p class="cinzel texto-centrado rsvp-subtitle" style="color: #FFF;">Nos encantaría contar contigo en nuestro gran día</p>
-                        <button class="btn-whatsapp" id="confirmarAsistenciaBtn" type="button">✓ Confirmar asistencia</button>
+                        <h2 class="imperial-script texto-centrado rsvp-title" style="color: #f3f2ed;">💌 Confirma tu
+                            asistencia</h2>
+                        <p class="cinzel texto-centrado rsvp-subtitle" style="color: #FFF;">Nos encantaría contar
+                            contigo en nuestro gran día</p>
+                        <button class="btn-whatsapp" id="confirmarAsistenciaBtn" type="button">✓ Confirmar
+                            asistencia</button>
                     </div>
-                    <div>
-                        <p class="cinzel texto-centrado" style="color: #FFF;">Con amor,</p>
-                        <h3 class="imperial-script texto-centrado" style="color: #613d3d;">Majo & Ángel</h3>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="parallax-section"></section>
+        <section class="parallax-section">
+            <div style="text-align: right; padding-right: 20px;">
+            <p class="cinzel" style="color: #FFF;">Con amor,</p>
+            <h3 class="imperial-script" style="color: #dd6060;">Majo & Ángel</h3>
+            </div>
+        </section>
     </main>
 
 
@@ -140,7 +141,7 @@
         if (confirmarAsistenciaBtn) {
             confirmarAsistenciaBtn.addEventListener("click", () => {
                 const mensaje = "Hola Majo y Ángel, confirmo mi asistencia 💛";
-                const numero = "524491234567";
+                const numero = "524492768906";
                 const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
                 window.open(url, "_blank");
