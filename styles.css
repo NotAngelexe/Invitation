@@ -76,17 +76,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    .parallax,
+    .parallax-section {
+        background-attachment: scroll;
+        will-change: auto;
+    }
+
     .parallax-section {
         height: 50vh;
-        will-change: auto;
     }
 
     .parallax-section:last-of-type {
         height: 100vh;
-    }
-
-    .parallax {
-        will-change: auto;
     }
 }
 
@@ -106,7 +107,13 @@ body {
 @media (max-width: 768px) {
     .contenido {
         min-height: auto;
-        padding: 40px 15px;
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido {
+        padding: 20px 10px;
     }
 }
 
@@ -177,7 +184,7 @@ body {
 
 @media (max-width: 768px) {
     .countdown-container {
-        padding: 25px 15px;
+        padding: 20px 12px;
         margin: 0 10px;
         box-shadow: 0 4px 16px rgba(107, 62, 46, 0.1);
     }
@@ -185,6 +192,13 @@ body {
     .countdown-container:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 24px rgba(107, 62, 46, 0.15);
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown-container {
+        padding: 15px 10px;
+        margin: 0 5px;
     }
 }
 
@@ -236,6 +250,17 @@ body {
     .countdown p {
         font-size: 0.75rem;
         letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown span {
+        font-size: 1.2rem;
+    }
+
+    .countdown p {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
     }
 }
 
@@ -399,16 +424,30 @@ li {
 
 @media (max-width: 768px) {
     .imperial-script-regular {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .imperial-script {
-        font-size: 56px;
+        font-size: 48px;
         margin-bottom: 10px;
     }
 
     .cinzel {
-        font-size: 18px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imperial-script-regular {
+        font-size: 36px;
+    }
+
+    .imperial-script {
+        font-size: 40px;
+    }
+
+    .cinzel {
+        font-size: 14px;
     }
 }
 
