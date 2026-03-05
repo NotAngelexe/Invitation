@@ -9,7 +9,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@200,400,600,900&family=Imperial+Script&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@200,400,600,900&family=Imperial+Script&display=swap"
         rel="stylesheet">
 
 </head>
@@ -18,86 +19,84 @@
 
     <main>
 
-    <section class="parallax fade-section"></section>
+        <section class="parallax"></section>
 
-    <section class="contenido">
-        <h1 class="imperial-script-regular texto-dorado">¡Nos casamos!</h1>
-        <p class="cinzel">Gracias por acompañarnos en este momento tan especial. Estamos emocionados de compartir
-            nuestra alegría con
-            ustedes y esperamos que puedan unirse a nosotros en la celebración de nuestro amor.
-        </p>
-    </section>
-
-
-    <section class="contenido">
-        <h1 class="imperial-script texto-dorado">Acompañanos en nuestra ceremonia</h1>
-        <p class="cinzel texto-centrado">
-            El dia 21 de marzo del 2026
-        </p>
-        <p class="cinzel texto-centrado">
-            a partir de las 3:00 pm
-        </p>
-        <p class="cinzel texto-centrado">
-            en "Salon Lily's".
-        </p>
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps?q=Calle+Doctor+Gerónimo+de+Orozco+206,+Primavera,+20050+Aguascalientes,+Ags.,+Mexico&output=embed"
-                title="Ubicación del salón en Google Maps" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
-    </section>
+        <section class="contenido">
+            <div class="decorative-line-top"></div>
+            <h1 class="imperial-script-regular texto-dorado">💍 ¡Nos casamos! 💍</h1>
+            <p class="cinzel">Gracias por acompañarnos en este momento tan especial. Estamos emocionados de compartir
+                nuestra alegría con
+                ustedes y esperamos que puedan unirse a nosotros en la celebración de nuestro amor.
+            </p>
+            <div class="decorative-line-bottom"></div>
+        </section>
 
 
-    <section class="parallax-section parallax-content-section">
-        <div class="fechas">
-            <div class="countdown-container" id="countdown-container">
-                <h2 class="imperial-script">Itinerario</h2>
-                <ul class="cinzel itinerario-list">
-                    <li>3:00 pm - Recepción</li>
-                    <li>3:30 - 4:30 pm - Banquete</li>
-                    <li>5:00 pm - Ceremonia</li>
-                    <li>8:00 pm - Baile</li>
-                </ul>
+        <section class="contenido">
+            <h1 class="imperial-script texto-dorado"> Acompañanos en nuestra ceremonia</h1>
+
+            <ul class="ceremonia-info">
+                <li class="cinzel texto-centrado">📆 El dia 21 de marzo del 2026</li>
+                <li class="cinzel texto-centrado">⏰ A partir de las 3:00 pm</li>
+                <li class="cinzel texto-centrado">📍 Salon Lily's</li>
+            </ul>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps?q=Calle+Doctor+Gerónimo+de+Orozco+206,+Primavera,+20050+Aguascalientes,+Ags.,+Mexico&output=embed"
+                    title="Ubicación del salón en Google Maps" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
+        </section>
 
-            <div class="countdown-container">
-                <h1 class="imperial-script-regular countdown">Dias restantes</h1>
-                <div id="countdown" class="countdown">
-                    <div>
-                        <span id="days">00</span>
-                        <p>Días</p>
+
+        <section class="parallax-section">
+            <br><br>
+            <div class="parallax-content-section">
+                <div class="fechas">
+                    <div class="countdown-container" id="countdown-container">
+                        <h2 class="imperial-script"> Itinerario</h2>
+                        <ul class="cinzel itinerario-list">
+                            <li> 3:00 pm - Recepción</li>
+                            <li> 3:30 - 4:30 pm - Banquete</li>
+                            <li> 5:00 pm - Ceremonia</li>
+                            <li> 8:00 pm - Baile</li>
+                        </ul>
+                    </div>
+                    <div class="countdown-container">
+                        <h1 class="imperial-script-regular countdown">⏳ Dias restantes</h1>
+                        <div id="countdown" class="countdown">
+                            <div>
+                                <span id="days">00</span>
+                                <p>Días</p>
+                            </div>
+                            <div>
+                                <span id="hours">00</span>
+                                <p>Horas</p>
+                            </div>
+                            <div>
+                                <span id="minutes">00</span>
+                                <p>Minutos</p>
+                            </div>
+                            <div>
+                                <span id="seconds">00</span>
+                                <p>Segundos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="countdown-container">
+                        <h2 class="imperial-script texto-centrado rsvp-title" style="color: #f3f2ed;">💌 Confirma tu asistencia</h2>
+                        <p class="cinzel texto-centrado rsvp-subtitle" style="color: #FFF;">Nos encantaría contar contigo en nuestro gran día</p>
+                        <button class="btn-whatsapp" id="confirmarAsistenciaBtn" type="button">✓ Confirmar asistencia</button>
                     </div>
                     <div>
-                        <span id="hours">00</span>
-                        <p>Horas</p>
-                    </div>
-                    <div>
-                        <span id="minutes">00</span>
-                        <p>Minutos</p>
-                    </div>
-                    <div>
-                        <span id="seconds">00</span>
-                        <p>Segundos</p>
+                        <p class="cinzel texto-centrado" style="color: #FFF;">Con amor,</p>
+                        <h3 class="imperial-script texto-centrado" style="color: #613d3d;">Majo & Ángel</h3>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div>
-                <h1 class="cinzel texto-centrado">Agradecemos muchisimo que nos puedas confirmar tu asistencia</h1>
-
-                <button class="btn-whatsapp" id="confirmarAsistenciaBtn" type="button">Confirmar asistencia</button>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="parallax-section" id="fotoJun">
-
-    </section>
-
-
+        <section class="parallax-section"></section>
     </main>
 
 
@@ -139,7 +138,7 @@
         if (confirmarAsistenciaBtn) {
             confirmarAsistenciaBtn.addEventListener("click", () => {
                 const mensaje = "Hola Majo y Ángel, confirmo mi asistencia 💛";
-                const numero = "524492768906";
+                const numero = "524491234567";
                 const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
                 window.open(url, "_blank");
